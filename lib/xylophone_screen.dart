@@ -1,17 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
-import 'package:audioplayers/audioplayers.dart';
+import 'package:xylophone_fltter/controller.dart';
 
 class XylophoneApp extends StatelessWidget {
   const XylophoneApp({super.key});
-
-  void playSound({int? noteNum}) {
-    var noteNum = 0;
-    final player = AudioPlayer();
-
-    player.play(AssetSource('note$noteNum.wav'));
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -41,69 +34,13 @@ class XylophoneApp extends StatelessWidget {
                 ])),
             child: Column(
               children: [
-                Expanded(
-                  child: TextButton(
-                      onPressed: () {
-                        playSound(noteNum: 1);
-                      },
-                      child: Container(
-                        color: Colors.red,
-                      )),
-                ),
-                Expanded(
-                  child: TextButton(
-                      onPressed: () {
-                        playSound(noteNum: 2);
-                      },
-                      child: Container(
-                        color: Colors.orange,
-                      )),
-                ),
-                Expanded(
-                  child: TextButton(
-                      onPressed: () {
-                        playSound(noteNum: 3);
-                      },
-                      child: Container(
-                        color: Colors.yellow,
-                      )),
-                ),
-                Expanded(
-                  child: TextButton(
-                      onPressed: () {
-                        playSound(noteNum: 4);
-                      },
-                      child: Container(
-                        color: Colors.green,
-                      )),
-                ),
-                Expanded(
-                  child: TextButton(
-                      onPressed: () {
-                        playSound(noteNum: 5);
-                      },
-                      child: Container(
-                        color: Colors.blue,
-                      )),
-                ),
-                Expanded(
-                  child: TextButton(
-                      onPressed: () {
-                        playSound(noteNum: 6);
-                      },
-                      child: Container(
-                        color: Colors.indigo,
-                      )),
-                ),
-                Expanded(
-                  child: TextButton(
-                      onPressed: () {
-                        playSound(noteNum: 7);
-                      },
-                      child: Container(
-                        color: Colors.purple,
-                      )),
-                ),
+                buildKey(notePlay: 1, buttonColor: Colors.red),
+                buildKey(notePlay: 2, buttonColor: Colors.orange),
+                buildKey(notePlay: 3, buttonColor: Colors.yellow),
+                buildKey(notePlay: 4, buttonColor: Colors.green),
+                buildKey(notePlay: 5, buttonColor: Colors.blue),
+                buildKey(notePlay: 6, buttonColor: Colors.indigo),
+                buildKey(notePlay: 7, buttonColor: Colors.purple),
               ],
             ),
           ),
