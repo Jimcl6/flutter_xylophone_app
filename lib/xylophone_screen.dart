@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
+// import screen
+import 'gradient_container.dart';
+
+// import dart packages
 import 'package:google_fonts/google_fonts.dart';
-import 'package:xylophone_fltter/controller.dart';
 
 class XylophoneApp extends StatelessWidget {
   const XylophoneApp({super.key});
@@ -22,27 +25,10 @@ class XylophoneApp extends StatelessWidget {
             ),
           ),
         ),
-        body: SafeArea(
-          child: Container(
-            decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    colors: [
-                  Color.fromRGBO(0, 2, 116, 1),
-                  Color.fromRGBO(1, 3, 139, 1),
-                ])),
-            child: Column(
-              children: [
-                buildKey(notePlay: 1, buttonColor: Colors.red),
-                buildKey(notePlay: 2, buttonColor: Colors.orange),
-                buildKey(notePlay: 3, buttonColor: Colors.yellow),
-                buildKey(notePlay: 4, buttonColor: Colors.green),
-                buildKey(notePlay: 5, buttonColor: Colors.blue),
-                buildKey(notePlay: 6, buttonColor: Colors.indigo),
-                buildKey(notePlay: 7, buttonColor: Colors.purple),
-              ],
-            ),
+        body: const SafeArea(
+          child: GradientContainer(
+            color1: Color.fromRGBO(0, 2, 116, 1),
+            color2: Color.fromRGBO(1, 3, 139, 1),
           ),
         ),
       ),

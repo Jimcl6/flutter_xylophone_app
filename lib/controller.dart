@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// import dart package
 import 'package:audioplayers/audioplayers.dart';
 
 void playSound({int? noteNum}) {
@@ -8,7 +9,7 @@ void playSound({int? noteNum}) {
   player.play(AssetSource('note$noteNum.wav'));
 }
 
-Widget buildKey({int? notePlay, var buttonColor}) {
+Widget buildKey({required int notePlay, MaterialColor? buttonColor}) {
   return Expanded(
     child: TextButton(
         onPressed: () {
