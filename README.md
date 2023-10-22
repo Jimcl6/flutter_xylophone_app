@@ -1,6 +1,6 @@
 # xylophone_fltter
 
-A new Flutter project.
+This is a flutter project from Dr. Angela Yu's FLuter Development Bootcamp Course. This project mainly focuses on teaching how we can import packages and use them to build the project.
 
 ## Getting Started
 
